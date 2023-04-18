@@ -38,6 +38,11 @@
 			<artifactId>junit-jupiter-engine</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>checkstyle</groupId>
+			<artifactId>checkstyle</artifactId>
+			<version>5.0</version>
+		</dependency>
 	</dependencies>
 
 	<build>
