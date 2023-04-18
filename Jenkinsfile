@@ -13,7 +13,13 @@ pipeline {
                     sh "docker tag ${user}/helloapp:${currentBuild.number} ${user}/helloapp:latest"
                 }
             }
+            post {
+                always {
+                    archiveArtifacts: "target/site/**"
+                }
+            }
         }
+
         stage ('Push to registry') {
             when { expression { return params.Build }} 
             steps {
